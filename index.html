@@ -1,0 +1,23 @@
+<html ng-app="paulasRidesApp">
+  <head>
+    <title>Paula Deen's Rides</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+  </head>
+  <body ng-controller="PaulasRidesCtrl">
+    <div class="container-fluid">
+      <div class="jumbo">
+        <h1>Thing's Paula Deen Rides to Work</h1>
+      </div>
+    </div>
+    <div class="rides-container container">
+      <ol>
+        <li class="ride" ng-repeat="ride in rides">
+          <h3>{{ride.name}}</h3>
+          <img ng-src="img/paulas_rides/{{ride.img}}">
+        </li>
+      </ol> 
+    </div>
+  </body>
+</html>
